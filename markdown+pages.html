@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% if request.path.startswith('/pages') %}
+	{% set post = get_doc(path2+'.md') or get_doc(path2+'.txt') or get_doc(path2+'.mk') or get_doc(path2+'.markdown') %}
+{% endif %}
+
+{% block title %}
+	{{ post.title }} - {{ site.title }}
+{% endblock %}
+
+{% block header %}
+	<div class="logo">
+		<a href="/">
+			<img src="/_image/avatar.jpg" alt="{{ site.title }}">
+		</a>
+	</div>
+	<h1>{{ post.title }}</h1>
+	<div class="line"></div>
+{% endblock %}
+
+
+{% block content %}
+	<div class="post">
+		{{ post.content }}
+	</div>
+{% endblock %}

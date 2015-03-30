@@ -1,0 +1,114 @@
+.wrapper {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+
+.logo {
+	margin-top: 40px;
+	img {
+		width: 60px;
+		height: 60px;
+	}
+	a {
+	    &:hover, &:focus, &:active {
+	    	background: none;
+	    }
+	}
+}
+
+.header {
+	text-align: center;
+	h1 {
+		margin-top: 40px;
+	}
+	.menu li {
+		display: inline;
+		padding-right: 20px;
+		font-size: .85em;
+		a {
+			color:#3C3C3C;
+
+			&:visited {
+	            color: #3C3C3C;
+	        }
+
+	        &:hover, &:focus, &:active{
+	        	background: none;
+	            border-bottom: 1px dashed #E23232;
+	        }
+	    }
+	}
+}
+
+.content {
+	margin-top: 80px;
+	.posts {
+		text-align: left;
+		.post-date {
+		  	float: right;
+		}
+		.post-item {
+			margin: 1.5em auto;
+			font-size: 1.11em;
+			line-height: 1.2;
+		}
+	}
+}
+
+.post-date {
+	color: #757575;
+	text-transform: uppercase;
+	margin-left: 30px;
+	span {
+		font-size: .75em;
+	}
+}
+
+.line{
+	background: #ddd;
+	background: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0)),color-stop(#ccc),to(rgba(255,255,255,0)));
+	background: -webkit-linear-gradient(left,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
+	background: linear-gradient(to right,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
+	height: 1px;
+	margin: 2.5em 0;
+}
+
+.post {
+	margin-bottom: 100px;
+	ul, li {
+		list-style: disc;
+	}
+	h2 {
+		font-size: 1.55555em;
+  		margin: 3rem 0 1.5rem;
+	}
+	h3 {
+		font-size: 1.35555em;
+  		margin: 2rem 0 1rem;
+	}
+	.codehilite{
+		margin: 0 -20%;
+	}
+	img {
+		width: 140%;
+		margin: 30px -20%;
+	}
+}
+
+.comment {
+	margin-top: 100px;
+}
+
+.footer {
+	text-align: center;
+	padding-top: 100px;
+	li {
+		display: inline;
+		margin-right: 10px;
+		padding-left: 10px;
+	}
+	span {
+		font-size: 0.75em;
+	}
+}

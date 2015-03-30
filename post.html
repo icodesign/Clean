@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+	{{ post.title }} - {{ site.title }}
+{% endblock %}
+
+{% block page_meta %}
+	<meta name="description" content="{{ site.content|striptags }}">
+	<meta name="keywords" content="{{ post.tags }}">
+{% endblock %}
+
+{% block header %}
+	<div class="logo">
+		<a href="/">
+			<img src="/_image/avatar.png" alt="{{ site.title }}">
+		</a>
+	</div>
+	<h1>{{ post.title }}</h1>
+	<div class="post-date">
+		<span>{{ post.date.strftime('%b %d, %Y') }}</span>
+	</div>
+	<div class="line"></div>
+{% endblock %}
+
+{% block content %}
+	<div class="post">
+		{{ post.content }}
+	</div>
+	<div class="line"></div>
+	<div class="comment">
+		{% include 'include/comments.html' %}
+	</div>
+{% endblock %}

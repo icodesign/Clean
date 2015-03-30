@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{{ site.title }}{% endblock %}</title>
+	{% block page_meta %}
+	<meta name="description" content="{{ site.content|striptags }}">
+	<meta name="keywords" content="{{ site.configs.keywords }}">
+	{% endblock %}
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="apple-mobile-web-app-status-bar-style">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	{{ load("/template/css/base.less /template/css/style.less ") }}
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			{% block header %}
+				<h1>{{ site.title }}</h1>
+				<!-- <div class="menu">
+					<ul>
+						<li><a href="/">Blog</a></li>
+						<li><a href="https://instagram.com/leewong_s/">Albums</a></li>
+						<li><a href="/pages/projects">Projects</a></li>
+						<li><a href="/pages/about">About</a></li>
+					</ul>
+				</div> -->
+			{% endblock %}
+		</div>
+		<div class="content">
+			{% block content %}
+			{% endblock %}
+		</div>
+		<div class="footer">
+			<div class="line"></div>
+			{% block footer %}
+				<ul>
+					<li><a href="https://instagram.com/leewong_s/">Instagram</a></li> · 
+					<li><a href="/pages/projects">Projects</a></li> · 
+					<li><a href="https://github.com/iCodesign">Github</a></li> · 
+					<li><a href="/pages/about">About</a></li>
+				</ul>
+				<span>©2015 iCodesign.me</span>
+			{% endblock %}
+		</div>
+	</div>
+</body>
+</html>
